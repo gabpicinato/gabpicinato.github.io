@@ -51,153 +51,9 @@
     text-decoration: none;
     font-weight: bold;
   }
-  
-  .hamburger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-  #perfil {
-    background-color: #f0f0f0;
-    padding: 60px 0;
-  }
-  
-  #perfil h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  #perfil p {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  #projetos {
-    padding: 60px 0;
-  }
-  
-  #projetos h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-  }
-  
-  .projeto-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  
-  .projeto-item {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 1024px) {
-    h1 {
-      font-size: 1.8rem;
-    }
-  
-    .menu li {
-      margin-left: 10px;
-    }
-  
-    .projeto-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      width: 90%;
-    }
-  
-    .header-content {
-      flex-direction: column;
-    }
-  
-    .menu {
-      display: none;
-      flex-direction: column;
-      text-align: center;
-      background-color: #333;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-    }
-  
-    .menu.active {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: block;
-      color: white;
-    }
-  
-    #perfil h2 {
-      font-size: 2rem;
-    }
-  
-    #perfil p {
-      font-size: 1rem;
-    }
-  
-    #projetos h2 {
-      font-size: 2rem;
-    }
-  
-    .projeto-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    #perfil h2 {
-      font-size: 1.8rem;
-    }
-  
-    #perfil p {
-      font-size: 0.9rem;
-    }
-  
-    #projetos h2 {
-      font-size: 1.8rem;
-    }
-  
-    .projeto-item {
-      padding: 15px;
-      font-size: 1rem;
-    }
-  }
-  
 
-
-
-
-
-
-
-body, html {
+  /* parte original */
+  body, html {
     margin: 0;
     padding: 0;
     font-family: 'Popins', sans-serif;
@@ -351,3 +207,142 @@ body, html {
     /* background-color: #ff2d96;  */
     background-color: aqua;
 }
+  /* fim parte original*/
+
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  #perfil {
+    background-color: #f0f0f0;
+    padding: 60px 0;
+  }
+  
+  #perfil h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #perfil p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #projetos {
+    padding: 60px 0;
+  }
+  
+  #projetos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .projeto-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .projeto-item {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .menu li {
+      margin-left: 10px;
+    }
+  
+    .projeto-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  
+    .header-content {
+      flex-direction: column;
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      background-color: #333;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+    }
+  
+    .menu.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      color: white;
+    }
+  
+    #perfil h2 {
+      font-size: 2rem;
+    }
+  
+    #perfil p {
+      font-size: 1rem;
+    }
+  
+    #projetos h2 {
+      font-size: 2rem;
+    }
+  
+    .projeto-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    #perfil h2 {
+      font-size: 1.8rem;
+    }
+  
+    #perfil p {
+      font-size: 0.9rem;
+    }
+  
+    #projetos h2 {
+      font-size: 1.8rem;
+    }
+  
+    .projeto-item {
+      padding: 15px;
+      font-size: 1rem;
+    }
+  }
