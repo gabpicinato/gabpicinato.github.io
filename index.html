@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="tela-cheia perfil">
+        <div class="foto-nome">
+            <img src="img/foto2.jpg" alt="Foto de Perfil">
+            <ul>
+                <h1><div class="texto-multicolor">Gabriel Picinato</div></h1>
+                <li>Estudante de Engenharia de Computação na Universidade Tecnológica Federal do Paraná</li>
+                <li>Ex-estudante do Colégio Militar de Curitiba (2016-2022)</li>
+                <li>Apaixonado por programação, futebol e viajar</li>
+                <li>Tenho 19 anos e atualmente estou morando em Curitiba-PR</li>
+            </ul>
+        </div>
+        
+        
+    </section>
+
+    <section class="tela-cheia secao-projeto">
+        <div class="projeto">
+            <div class="projeto-info">
+                <h2> <div class="texto-multicolor"> LostInTheCave</div></h2> 
+                <p>Lost In The Cave é um jogo de aventura 2D desenvolvido em C++ utilizando os princípios de Programação Orientada a Objetos (POO). 
+                    O jogo se passa em um ambiente misterioso de uma caverna, onde o objetivo é navegar por obstáculos, evitar inimigos e encontrar a saída. O jogo 
+                    suporta modos de um jogador e dois jogadores, e possui dois níveis distintos com personagens, 
+                    obstáculos e níveis de dificuldade variados. O projeto foi desenvolvido como parte do curso de Técnicas de Programação.</p>
+                <a href="https://github.com/gabpicinato/LostInTheCave" class="link-botao">Acessar no GitHub</a>
+            </div>
+            <div class="projeto-img">
+                <div class="carrossel1">
+                    <img src="img/lost1.png" alt="Projeto 1" class="active">
+                    <img src="img/lost2.png" alt="Projeto 1">
+                    <img src="img/lost3.png" alt="Projeto 1">
+                    <img src="img/lost4.png" alt="Projeto 1">
+                    <img src="img/lost5.png" alt="Projeto 1">
+                    <img src="img/lost6.png" alt="Projeto 1">
+                    <img src="img/lost7.png" alt="Projeto 1">
+                </div>
+            </div>
+        </div>
+
+        <div class="projeto">
+            <div class="projeto-info">
+                <h2><div class="texto-multicolor">Scanner 3D</div></h2>
+                <p>
+                    'Scanner 3D para Cálculo de Volume de Objetos' é um projeto voltado para determinar a metodologia mais eficaz de cálculo de volume de objetos. O sistema utiliza um sensor 
+                    infravermelho para capturar as distâncias entre o sensor e o objeto, gerando uma nuvem de pontos que representa a superfície do objeto. 
+                    As metodologias propostas para o cálculo de volume são baseadas em algoritmos e cálculos geométricos derivados dos dados coletados.</p>
+                <a href="https://github.com/gabpicinato/Scanner-3D" class="link-botao">Acessar no GitHub</a>
+            </div>
+            <div class="projeto-img">
+                <img src="img/scanner3d.gif" alt="Projeto 2">
+            </div>
+        </div>
+
+        <div class="projeto">
+            <div class="projeto-info">
+                <h2><div class="texto-multicolor">Teste Matemático</div></h2>
+                <p>O objetivo do projeto é disponibilizar um simulado de questões de matemática para estudantes do ensino fundamental, que não somente estimula
+                    seus aprendizados matemáticos, mas também melhora o raciocínio lógico e a interpretação de problemas.
+                    <br>Todas as questões foram inspiradas em problemas matemáticos que a minha irmã de 11 anos, que está fazendo cursinho para entrar no Colégio Militar de Curitiba, pedia ajuda.
+                    <br>Dentro do site você pode relizar a prova, verificar a sua nota e ver a resposta e explicação de cada questão ao finalizar.
+                    Esse foi o meu primeiro projeto utilizando HTML, CSS e JavaScript.
+                    </p>
+                <a href="https://github.com/gabpicinato/LostInTheCave" class="link-botao">Acessar no GitHub</a>
+            </div>
+            <div class="projeto-img">
+                <div class="carrossel2">
+                    <img src="img/testemat1.png" alt="Foto 1" class="active">
+                    <img src="img/testemat2.png" alt="Foto 2">
+                    <img src="img/testemat3.png" alt="Foto 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="projeto">
+            <div class="projeto-info">
+                <h2><div class="texto-multicolor">Site Portfólio</div></h2>
+                <p>É este próprio site. Ele foi feito para expor os trabalhos e projetos que desenvolvi ou  
+                <br>participei do desenvolvimento, além de apresentar as características gerais de cada um.
+                <br>Feito com HTML, CSS e JavaScript.     
+                </p>
+                <a href="https://github.com/gabpicinato/LostInTheCave" class="link-botao">Acessar no GitHub</a>
+            </div>
+            <div class="projeto-img">
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        let currentIndex2 = 0;
+        const images = document.querySelectorAll('.carrossel1 img');
+        const images2 = document.querySelectorAll('.carrossel2 img');
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            images2[currentIndex2].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            currentIndex2 = (currentIndex2 + 1) % images2.length;
+
+            images[currentIndex].classList.add('active');
+            images2[currentIndex2].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000);  // Muda a cada 3 segundos
+    </script>
+
+</body>
+</html>
+

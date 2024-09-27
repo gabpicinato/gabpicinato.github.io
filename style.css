@@ -1,0 +1,154 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Popins', sans-serif;
+    background-color: #181818;
+    color: #fff;
+}
+.tela-cheia {
+    width: 100vw-40px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.perfil {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #222;
+    text-align: left;
+}
+
+.perfil .foto-nome {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil h1 {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 48px;
+    text-align: left;
+}
+
+.perfil ul {
+    padding-left: 40px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.perfil li {
+    margin-bottom: 10px;
+}
+
+.perfil img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+
+/* .perfil ul {
+    padding: 40px;
+    margin: 0;
+} */
+
+/* .perfil ul li {
+    margin: 0px;
+    text-align: left;
+} */
+
+.texto-multicolor {
+    background: linear-gradient(90deg, rgb(42, 226, 233) 0%, rgb(76, 9, 231) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    /* font-size: 36px; */
+    font-weight: bold;
+}
+
+.secao-projetos {
+    background-color: #111;
+}
+.projeto {
+    display: flex;
+    /* padding: 20px; */
+    margin-top: 40px;
+    border-bottom: 1px solid #333;
+}
+.projeto:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.projeto-info {
+    flex: 1;
+    padding: 20px;
+}
+.projeto-info h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+.projeto-info p {
+    font-size: 16px;
+    color: #ffffff;
+}
+.projeto-img {
+    flex: 1;
+    padding: 20px;
+}
+.projeto-img img {
+    width: 800px;
+    height: 600px;
+}
+
+.carrossel1 {
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrossel1 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carrossel1 img.active {
+    opacity: 1;
+}
+
+.carrossel2 {
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrossel2 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carrossel2 img.active {
+    opacity: 1;
+}
+
+.link-botao {
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: #5b65f1;
+    color: black;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.link-botao:hover {
+    /* background-color: #ff2d96; */
+    background-color: aqua;
+}
