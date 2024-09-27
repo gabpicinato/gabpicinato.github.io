@@ -6,9 +6,8 @@ body, html {
     color: #fff;
 }
 .tela-cheia {
-    width: 100vw-40px;
-    padding-left: 5%;
-    padding-right: 5%;
+    width: calc(100% - 10%);
+    margin: 0 auto;
 }
 .perfil {
     padding-top: 40px;
@@ -41,6 +40,7 @@ body, html {
 }
 
 .perfil img {
+    padding: 3%;
     border-radius: 50%;
     width: 400px;
     height: 400px;
