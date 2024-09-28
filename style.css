@@ -16,78 +16,46 @@
     margin: 0 auto;
     padding: 20px;
   }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
-  .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  nav {
-    position: relative;
-  }
-  
-  .menu {
-    display: flex;
-    list-style: none;
-  }
-  
-  .menu li {
-    margin-left: 20px;
-  }
-  
-  .menu li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
 
-  /* parte original */
-  body, html {
+  /* Definindo a largura da viewport */
+  html, body {
     margin: 0;
     padding: 0;
     font-family: 'Popins', sans-serif;
     background-color: #181818;
     color: #fff;
 }
+
 .tela-cheia {
-    width: calc(100% - 10%);
+    width: 100%;
     margin: 0 auto;
+    padding: 20px;
 }
+
 .perfil {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #222;
-    text-align: left;
+    text-align: center;
 }
 
 .perfil .foto-nome {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;
 }
 
 .perfil h1 {
     margin: 0;
     padding-bottom: 20px;
-    font-size: 48px;
-    text-align: left;
+    font-size: 36px;
+    text-align: center;
 }
 
 .perfil ul {
-    padding-left: 40px;
+    padding-left: 0;
     margin-top: 10px;
-    text-align: left;
 }
 
 .perfil li {
@@ -95,254 +63,147 @@
 }
 
 .perfil img {
-    padding: 3%;
+    padding: 1%;
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
 }
-
-/* .perfil ul {
-    padding: 40px;
-    margin: 0;
-} */
-
-/* .perfil ul li {
-    margin: 0px;
-    text-align: left;
-} */
 
 .texto-multicolor {
     background: linear-gradient(90deg, rgb(42, 226, 233) 0%, rgb(76, 9, 231) 100%);
     -webkit-background-clip: text;
     color: transparent;
-    /* font-size: 36px;  */
     font-weight: bold;
 }
 
 .secao-projetos {
     background-color: #111;
 }
+
 .projeto {
     display: flex;
-    /* padding: 20px;  */
-    margin-top: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 40px;
     border-bottom: 1px solid #333;
 }
-.projeto:nth-child(even) {
-    flex-direction: row-reverse;
-}
+
 .projeto-info {
-    flex: 1;
-    padding: 20px;
+    width: 40%;
 }
-.projeto-info h2 {
-    font-size: 32px;
-    margin: 10px 0;
-}
-.projeto-info p {
-    font-size: 16px;
-    color: #ffffff;
-}
+
 .projeto-img {
-    flex: 1;
-    padding: 20px;
+    width: 45%;
 }
+
+
 .projeto-img img {
-    width: 800px;
-    height: 600px;
-}
-
-.carrossel1 {
-    width: 800px;
-    height: 600px;
-    overflow: hidden;
-    position: relative;
-}
-
-.carrossel1 img {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
 
-.carrossel1 img.active {
-    opacity: 1;
-}
-
-.carrossel2 {
-    width: 900px;
-    height: 600px;
-    overflow: hidden;
+/* Contêiner do carrossel */
+.carrossel1, .carrossel2 {
     position: relative;
-}
-
-.carrossel2 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    height: auto;
+    min-height: 200px; /* Altura mínima para garantir visibilidade inicial */
+    overflow: hidden; /* Esconde as imagens que saem do contêiner */
 }
 
-.carrossel2 img.active {
-    opacity: 1;
+/* Imagens do carrossel */
+.carrossel1 img, .carrossel2 img {
+    max-width: 100%; /* Garante que a imagem nunca exceda a largura do contêiner */
+    max-height: 100%; /* Garante que a imagem nunca exceda a altura do contêiner */
+    width: 100%;
+    height: auto;
+    display: none; /* Esconde todas as imagens inicialmente */
+    object-fit: contain; /* Ajusta a imagem dentro do contêiner sem cortar */
+}
+
+/* Imagem ativa */
+.carrossel1 img.active, .carrossel2 img.active {
+    display: block; /* Exibe apenas a imagem ativa */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .link-botao {
-    text-decoration: none;
-    padding: 10px 10px;
-    background-color: #5b65f1;
-    color: black;
-    border-radius: 5px;
+    margin-top: 16px;
     display: inline-block;
-    margin-top: 10px;
-}
-.link-botao:hover {
-    /* background-color: #ff2d96;  */
-    background-color: aqua;
-}
-  /* fim parte original*/
-
-  .hamburger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-  #perfil {
-    background-color: #f0f0f0;
-    padding: 60px 0;
-  }
-  
-  #perfil h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  #perfil p {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  #projetos {
-    padding: 60px 0;
-  }
-  
-  #projetos h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-  }
-  
-  .projeto-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  
-  .projeto-item {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: #333;
+    background: linear-gradient(90deg, rgb(42, 226, 233) 0%, rgb(76, 9, 231) 100%);
+    border: none;
+    padding: 10px 20px;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 1024px) {
+}
+
+.link-botao:hover {
+    background: linear-gradient(90deg, rgb(76, 9, 231) 0%, rgb(42, 226, 233) 100%);
+}
+
+@media (max-width: 768px) {
+    .projeto {
+        flex-direction: column;
+    }
+
+    .projeto-info, .projeto-img {
+        width: 100%;
+    }
+
+    .perfil .foto-nome {
+        flex-direction: column;
+    }
+
+    .perfil img {
+        width: 250px;
+        height: 250px;
+    }
+
     h1 {
-      font-size: 1.8rem;
+        font-size: 28px;
     }
-  
-    .menu li {
-      margin-left: 10px;
+
+    .link-botao {
+        font-size: 14px;
+        padding: 8px 16px;
     }
-  
-    .projeto-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      width: 90%;
-    }
-  
-    .header-content {
-      flex-direction: column;
-    }
-  
-    .menu {
-      display: none;
-      flex-direction: column;
-      text-align: center;
-      background-color: #333;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-    }
-  
-    .menu.active {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: block;
-      color: white;
-    }
-  
-    #perfil h2 {
-      font-size: 2rem;
-    }
-  
-    #perfil p {
-      font-size: 1rem;
-    }
-  
-    #projetos h2 {
-      font-size: 2rem;
-    }
-  
-    .projeto-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     h1 {
-      font-size: 1.5rem;
+        font-size: 24px;
     }
-  
-    #perfil h2 {
-      font-size: 1.8rem;
+
+    .perfil img {
+        width: 250px;
+        height: 250px;
     }
-  
-    #perfil p {
-      font-size: 0.9rem;
+
+    .link-botao {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 12px;
+        padding: 6px 12px;
     }
-  
-    #projetos h2 {
-      font-size: 1.8rem;
+
+    p {
+        font-size: 14px;
     }
-  
-    .projeto-item {
-      padding: 15px;
-      font-size: 1rem;
-    }
-  }
+}
+
