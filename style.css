@@ -60,6 +60,7 @@
 
 .perfil li {
     margin-bottom: 10px;
+    list-style-type: none;
 }
 
 .perfil img {
@@ -141,6 +142,7 @@ a {
 
 .link-botao {
     margin-top: 16px;
+    margin-right: 16px;
     display: inline-block;
     background: linear-gradient(90deg, rgb(42, 226, 233) 0%, rgb(76, 9, 231) 100%);
     border: none;
@@ -156,6 +158,35 @@ a {
 .link-botao:hover {
     background: linear-gradient(90deg, rgb(76, 9, 231) 0%, rgb(42, 226, 233) 100%);
 }
+
+footer {
+    background-color: #333; /* Cor do fundo do rodapé */
+    padding: 20px 0;
+    text-align: center;
+    color: white; /* Cor do texto */
+}
+
+.contact p{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    margin: 0 15px; /* Espaçamento entre os ícones */
+    display: inline-block;
+}
+
+.contact img {
+    width: 40px; /* Tamanho dos ícones */
+    height: auto;
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.contact a:hover img {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+
 
 @media (max-width: 768px) {
     .projeto {
@@ -198,6 +229,7 @@ a {
     .link-botao {
         margin-top: 6px;
         margin-bottom: 6px;
+        margin-right: 6px;
         font-size: 12px;
         padding: 6px 12px;
     }
